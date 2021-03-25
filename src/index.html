@@ -17,12 +17,15 @@
         <a href="#home" class="nav__options__option">Inicio</a>
         <a href="#about" class="nav__options__option">Nosotros</a>
         <a href="#services" class="nav__options__option">Servicios</a>
+        <a href="#installations" class="nav__options__option">Instalaciones</a>
         <a class="nav__options__btn">Haz una cita</a>
       </div>
     </nav>
 
-    <div class="appointment appointment--active">
+    <div class="appointment">
       <form class="appointment__form">
+        <span class="appointment__form__close">X</span>
+
         <h1>Ingrese sus datos:</h1>
 
         <div class="appointment__form__input">
@@ -79,9 +82,114 @@
       </div>
     </header>
 
-    <main>
-      <section class="about" id="about">
+    <a id="about"></a>
 
+    <main>
+      <section class="about">
+        <div class="about__title">
+          <span>TRANSPARENCIA</span>
+          <h1>Conoce Mas Sobre Nosotros</h1>
+        </div>
+
+        <div class="about__cards">
+          <div class="about__cards__card">
+            <img src="./static/svg/nosotros.svg" alt="us svg">
+            <h3>Nosotros</h3>
+            <p>Somos un hospital formado por un equipo de profesionales en la medicina, dedicados al cuidado y bienestar
+              de la salud humana</p>
+          </div>
+
+          <div class="about__cards__card">
+            <img src="./static/svg/mision.svg" alt="mision svg">
+            <h3>Misión</h3>
+            <p>Brindar servicios médicos y hospitalarios de alta calidad a precios accesibles</p>
+          </div>
+
+          <div class="about__cards__card">
+            <img src="./static/svg/vision.svg" alt="vision svg">
+            <h3>Visión</h3>
+            <p>Ser una institución de salud líder, asegurando la calidad en la atencíon médica</p>
+          </div>
+
+          <div class="about__cards__card">
+            <img src="./static/svg/valores.svg" alt="valores svg">
+            <h3>Valores</h3>
+            <p>Actitud de servicio, honestidad, armonía y respeto</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__card">
+          <h1>100+</h1>
+          <h3>Visitante Mensuales</h3>
+        </div>
+
+        <div class="reviews__card">
+          <h1>3000+</h1>
+          <h3>Pacientes Atendidos</h3>
+        </div>
+
+        <div class="reviews__card">
+          <h1>98%</h1>
+          <h3>Reseñas Positivas</h3>
+        </div>
+      </section>
+
+      <section class="installations" id="installations">
+        <div class="installations__title">
+          <span>INSTALACIONES</span>
+          <h1>Contamos con las mejores instalaciones</h1>
+        </div>
+
+
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="./static/img/instalaciones1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="./static/img/instalaciones2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="./static/img/instalaciones3.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="./static/img/instalaciones4.png" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="./static/img/instalaciones1.jpg" style="width:100%"
+                onclick="currentSlide(1)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./static/img/instalaciones2.jpg" style="width:100%"
+                onclick="currentSlide(2)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./static/img/instalaciones3.jpg" style="width:100%"
+                onclick="currentSlide(3)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="./static/img/instalaciones4.png" style="width:100%"
+                onclick="currentSlide(4)">
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>

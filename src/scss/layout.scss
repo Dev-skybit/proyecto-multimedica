@@ -10,10 +10,12 @@
   }
 }
 
-.nav {
-  position: sticky;
-  top: 24px;
+.header,
+section {
+  margin: 128px 0;
+}
 
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +88,8 @@
   }
 
   &__form {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,6 +172,21 @@
     &__btn {
       @include btn-light (200px);
     }
+
+    &__close {
+      font-size: 1.4rem;
+
+      position: absolute;
+      top: 32px;
+      right: 32px;
+
+      transition: $trans;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+      }
+    }
   }
 }
 
@@ -189,7 +208,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 15% 0;
+    padding: 10% 0;
 
     &__green {
       text-transform: uppercase;
@@ -230,7 +249,7 @@
 
         span {
           font-size: .9rem;
-          color: $lightBlue;
+          color: $smoke;
         }
 
         img {
@@ -260,5 +279,157 @@
 }
 
 .about {
-  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: auto;
+
+  &__title {
+    text-align: center;
+
+    margin-bottom: 64px;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    &__card {
+
+      img,
+      h3 {
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: $smoke;
+      }
+
+      img {
+        height: 75px;
+        width: 75px;
+
+        padding: 10px;
+
+        border-radius: 20px;
+        background: $light-blue;
+      }
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: auto;
+  width: 100%;
+
+  margin: auto;
+  padding: 64px 32px;
+
+  background: $bg;
+  border-radius: 20px;
+
+  &__card {
+    text-align: center;
+
+    position: relative;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      &:after {
+        content: "";
+        position: absolute;
+        top: -30%;
+        left: 160%;
+
+        height: 160%;
+        width: 1px;
+
+        background: $smoke;
+      }
+    }
+  }
+}
+
+.installations {
+  height: 90vh;
+  width: 100%;
+
+  &__title {
+    text-align: center;
+
+    height: 10%;
+
+    h1 {
+      text-transform: capitalize;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    display: flex;
+    scroll-snap-type: x mandatory;
+
+    height: 90%;
+
+    overflow-x: scroll;
+
+    &__slide {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      scroll-snap-align: center;
+
+      height: 80%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &__images {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      height: 20%;
+      width: 100%;
+
+      background: $white;
+
+      a {
+        height: 100%;
+        width: 95%;
+
+        img {
+          height: 100%;
+          width: 90%;
+        }
+      }
+    }
+  }
 }

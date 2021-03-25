@@ -198,9 +198,14 @@ var appointment = function appointment() {
   var btn = document.querySelector('.nav__options__btn');
   var wrapper = document.querySelector('.wrapper');
   var appointmentContainer = document.querySelector('.appointment');
+  var close = document.querySelector('.appointment__form__close');
   btn.addEventListener('click', function () {
     wrapper.classList.add('wrapper--no-scroll');
     appointmentContainer.classList.add('appointment--active');
+  });
+  close.addEventListener('click', function () {
+    wrapper.classList.remove('wrapper--no-scroll');
+    appointmentContainer.classList.remove('appointment--active');
   });
 };
 
@@ -233,7 +238,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51936" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59476" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

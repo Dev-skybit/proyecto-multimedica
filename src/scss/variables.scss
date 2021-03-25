@@ -1,8 +1,9 @@
 // Colors
 $bg: #F7FAFB;
 $white: #FFF;
+$smoke: #72889b;
 
-$lightBlue: #aecdff;
+$light-blue: #e3eeff;
 $blue: #0857DE;
 $aquaBlue: #80DFBD;
 
@@ -40,7 +41,7 @@ $trans: all .3s ease-in-out;
 
   padding: .8rem 0;
 
-  background: $lightBlue;
+  background: $light-blue;
   border-radius: 10px;
   cursor: pointer;
   border: none;
