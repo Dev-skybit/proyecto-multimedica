@@ -73,9 +73,77 @@
   display: flex;
 }
 .appointment__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   height: 80vh;
-  width: 70%;
+  width: 60%;
   background: #FFF;
+  border-radius: 20px;
+}
+.appointment__form__input {
+  position: relative;
+  height: 4rem;
+  width: 32rem;
+}
+.appointment__form__input input {
+  font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
+  padding-top: 32px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+.appointment__form__input input:focus + label, .appointment__form__input input:valid + label {
+  font-size: 1rem;
+  color: #0857DE;
+  top: 0;
+}
+.appointment__form__input input:focus + label:after, .appointment__form__input input:valid + label:after {
+  top: 100%;
+  width: 100%;
+}
+.appointment__form__input input:focus, .appointment__form__input input:valid {
+  border: none;
+}
+.appointment__form__input label {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.appointment__form__input label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #0857DE;
+  transition: all 0.3s ease-in-out;
+}
+.appointment__form__btn {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #0857DE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 0.8rem 0;
+  background: #aecdff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .header {
@@ -125,7 +193,7 @@
 }
 .header__info__services__service span {
   font-size: 0.9rem;
-  color: #78A9F9;
+  color: #aecdff;
 }
 .header__info__services__service img {
   grid-row: 1/3;

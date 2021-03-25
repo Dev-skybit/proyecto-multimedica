@@ -2,7 +2,7 @@
 $bg: #F7FAFB;
 $white: #FFF;
 
-$lightBlue: #78A9F9;
+$lightBlue: #aecdff;
 $blue: #0857DE;
 $aquaBlue: #80DFBD;
 
@@ -27,7 +27,7 @@ $trans: all .3s ease-in-out;
   cursor: pointer;
 }
 
-@mixin btn-ligh ($width) {
+@mixin btn-light ($width) {
   font-size: .8rem;
   font-weight: bold;
   color: $blue;
@@ -43,4 +43,6 @@ $trans: all .3s ease-in-out;
   background: $lightBlue;
   border-radius: 10px;
   cursor: pointer;
+  border: none;
+  outline: none;
 }

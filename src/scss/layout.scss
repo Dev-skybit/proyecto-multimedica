@@ -85,11 +85,89 @@
     display: flex;
   }
 
-  &__form{
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
     height: 80vh;
-    width: 70%;
+    width: 60%;
 
     background: $white;
+    border-radius: 20px;
+
+    &__input {
+      position: relative;
+
+      height: 4rem;
+      width: 32rem;
+
+      input {
+        font-size: 1.2rem;
+
+        height: 100%;
+        width: 100%;
+
+        padding-top: 32px;
+
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        transition: $trans;
+
+        &:focus+label,
+        &:valid+label {
+          font-size: 1rem;
+          color: $blue;
+
+          top: 0;
+
+          &:after {
+            top: 100%;
+
+            width: 100%;
+          }
+        }
+
+        &:focus,
+        &:valid {
+          border: none;
+        }
+      }
+
+      label {
+        font-size: 1.2rem;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        transition: $trans;
+        pointer-events: none;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+
+          height: 2px;
+          width: 0;
+
+          background: $blue;
+          transition: $trans;
+        }
+      }
+    }
+
+    &__btn {
+      @include btn-light (200px);
+    }
   }
 }
 

@@ -22,7 +22,21 @@
     </nav>
 
     <div class="appointment appointment--active">
-      <div class="appointment__form"></div>
+      <form class="appointment__form">
+        <h1>Ingrese sus datos:</h1>
+
+        <div class="appointment__form__input">
+          <input type="text" name="name" id="" required autocomplete="off">
+          <label for="name"> <span>Nombre Completo</span> </label>
+        </div>
+
+        <div class="appointment__form__input">
+          <input type="email" name="email" id="" required autocomplete="off">
+          <label for="email"> <span>Correo Electrónico</span> </label>
+        </div>
+
+        <button class="appointment__form__btn">Enviar</button>
+      </form>
     </div>
 
     <header class="header" id="home">
