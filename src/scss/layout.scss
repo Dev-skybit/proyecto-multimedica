@@ -1,0 +1,186 @@
+.wrapper {
+  width: 80%;
+
+  margin: auto;
+
+  &--no-scroll {
+    max-height: 100vh;
+
+    overflow: hidden;
+  }
+}
+
+.nav {
+  position: sticky;
+  top: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 24px 0;
+
+  width: 100%;
+
+  h1 {
+    span {
+      font-size: 2.2rem;
+      color: $aquaBlue;
+    }
+  }
+
+  &__options {
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 50%;
+
+    &__option {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+
+        width: 0;
+        height: 2px;
+
+        background: $blue;
+        transition: $trans;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    &__btn {
+      @include btn-primary ($blue, 120px);
+    }
+  }
+}
+
+.appointment {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  &--active {
+    display: flex;
+  }
+
+  &__form{
+    height: 80vh;
+    width: 70%;
+
+    background: $white;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 90vh;
+
+  &__info,
+  &__img {
+    flex: 0 0 50%;
+    height: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15% 0;
+
+    &__green {
+      text-transform: uppercase;
+      font-weight: bolder;
+      color: $aquaBlue;
+
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      text-transform: capitalize;
+      letter-spacing: 2px;
+
+      margin-bottom: 56px;
+    }
+
+    &__services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 32px;
+
+      width: 80%;
+
+      margin-bottom: 56px;
+
+      &__service {
+        font-size: 1rem;
+
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+        h4,
+        span {
+          align-self: center;
+          grid-column: 2;
+        }
+
+        span {
+          font-size: .9rem;
+          color: $lightBlue;
+        }
+
+        img {
+          grid-row: 1 / 3;
+
+          width: 90%;
+          height: 90%;
+
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &__btn {
+      @include btn-primary ($blue, 200px);
+    }
+  }
+
+  &__img {
+    img {
+      height: 100%;
+      width: 100%;
+
+      border-radius: 0 20% 0 20%;
+    }
+  }
+}
+
+.about {
+  height: 60vh;
+}

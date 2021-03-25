@@ -1,0 +1,46 @@
+// Colors
+$bg: #F7FAFB;
+$white: #FFF;
+
+$lightBlue: #78A9F9;
+$blue: #0857DE;
+$aquaBlue: #80DFBD;
+
+// Variables
+$trans: all .3s ease-in-out;
+
+@mixin btn-primary ($bg-color, $width) {
+  font-size: .8rem;
+  font-weight: bold;
+  color: $white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $width;
+
+  padding: .8rem 0;
+
+  background-color: $bg-color;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+@mixin btn-ligh ($width) {
+  font-size: .8rem;
+  font-weight: bold;
+  color: $blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $width;
+
+  padding: .8rem 0;
+
+  background: $lightBlue;
+  border-radius: 10px;
+  cursor: pointer;
+}
